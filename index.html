@@ -6,8 +6,8 @@
     <h1>Select a Major</h1>
 
       <div style='padding: 5px;'> 
-         <button type='button' class="btn btn-primary" onClick="function(major)">CIT Majors</button> 
-         <button type='button' class="btn btn-primary" onClick="function(major2)">Business Majors</button>
+         <button type='button' class="btn btn-primary" onClick="function(CIT)">CIT Majors</button> 
+         <button type='button' class="btn btn-primary" onClick="function(BUS)">Business Majors</button>
       </div>
   
      <div id="result"></div>   <!-- data will be displayed here -->
@@ -40,11 +40,15 @@ var students = [
   {name:"Eldon",major:"CIT",midterm:98,final:99}
 ];
 
-var CITstudents =  students.filter(function(major) {
+var CITstudents =  students.filter(function(CIT) {
     return students.major = CIT;   
+  
+var BUSstudents =  students.filter(function(BUS) {
+    return students.major = BUS;  
 });
 
-console.log(CITstudents)    
+console.log(CITstudents) 
+console.log(BUSstudents) 
   
 <script>
    document.addEventListener('DOMContentLoaded', function() {      // when page has loaded, more or less
