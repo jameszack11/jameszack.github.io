@@ -41,10 +41,10 @@ var students = [
 ];
 
 var CITstudents =  students.filter(function(CIT) {
-    return students.major >= 'CIT';   
+    return CIT.major >= 'CIT';   
   
 var BUSstudents =  students.filter(function(BUS) {
-    return students.major >= 'BUS';  
+    return BUS.major >= 'BUS';  
 });
 
 console.log(CITstudents) 
