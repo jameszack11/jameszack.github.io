@@ -17,16 +17,16 @@
      <body style='margin-left: 30px;'>
 
        <script>
-      function getData(selected_meal) {      // called when a button is clicked. paramter selected_meal = breakfast, lunch, or dinner
+      function getData(CIT) {     
       var request = new XMLHttpRequest();
-      request.open('GET', 'menu_items.json');      // open Ajax request for data file menu_items.json
+      request.open('GET', 'cit5students.json');     
  
-      request.onload = function() {                     // when the data comes back, browser calls this function
-      var data = JSON.parse(request.responseText);    // convert json to javascript array of objects
+      request.onload = function() {                    
+      var data = JSON.parse(request.responseText);    
 
-      meal_items = data.filter(getMeal)       // meal_itmes array will contain the filtered data using the getMeal() function
-      function getMeal(item) {
-      return item.meal == selected_meal; 
+      meal_items = data.filter(getmajor)       
+      function getmajor(item) {
+      return item.major == CIT; 
 
   
 
