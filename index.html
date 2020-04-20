@@ -28,7 +28,15 @@
       function getmajor(item) {
       return item.major == CIT; 
 
-  
+      <script type="text/x-handlebars-template" id="tableTemplate">
+      <table class="table table-striped">
+          <tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
+             {{#each rows}}
+                <tr>
+                     <td>{{name}}</td><td>{{meal}}</td><td>{{category}}</td><td>{{portion}}</td>
+                </tr>
+             {{/each}}
+      </table>
 
   </body>
   </html>
