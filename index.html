@@ -6,8 +6,8 @@
     <h1>Select a Major</h1>
 
       <div style='padding: 5px;'> 
-         <button type='button' class="btn btn-primary" onClick="function getData(CIT)">CIT Majors</button>
-         <button type='button' class="btn btn-primary" onClick="getData('BUS')">Business Majors</button>
+         <button type='button' class="btn btn-primary" onClick="function getData('CIT')">CIT Majors</button>
+         <button type='button' class="btn btn-primary" onClick="function getData('BUS')">Business Majors</button>
       </div>
   
      <div id="result"></div>   
@@ -27,6 +27,17 @@
       meal_items = data.filter(getmajor)       
       function getmajor(item) {
       return item.major == CIT; 
+        
+      function getData(BUS) {     
+      var request = new XMLHttpRequest();
+      request.open('GET', 'cit5students.json');     
+ 
+      request.onload = function() {                    
+      var data = JSON.parse(request.responseText);    
+
+      meal_items = data.filter(getmajor)       
+      function getmajor(item) {
+      return item.major == BUS; 
 
       <script type="text/x-handlebars-template" id="tableTemplate">
       <table class="table table-striped">
