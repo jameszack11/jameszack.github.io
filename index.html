@@ -26,7 +26,7 @@
       request.onload = function() {                    
       var data = JSON.parse(request.responseText);    
 
-      meal_items = data.filter(getmajor)       
+      major_items = data.filter(getmajor)       
       function getmajor(item) {
       return item.major == CIT; 
         
@@ -37,7 +37,7 @@
       request.onload = function() {                    
       var data = JSON.parse(request.responseText);    
 
-      meal_items = data.filter(getmajor)       
+      major_items = data.filter(getmajor)       
       function getmajor(item) {
       return item.major == BUS; 
 
